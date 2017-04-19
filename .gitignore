@@ -1,0 +1,6 @@
+# Webroot populated by Grunt
+public
+
+# npm
+node_modules
+.npm
