@@ -12,7 +12,6 @@ const Features = React.createClass({
           this.props.properties.map((property) => {
             return (
               <Feature
-                something={"hello"}
                 key={property.id}
                 coordinates={[property.lat, property.long]}
                 onClick={() => {this.props.handleMarkerClick(property)}}

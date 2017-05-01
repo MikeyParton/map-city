@@ -34,13 +34,92 @@ const App = React.createClass({
     })
   },
   render () {
+    const property = properties[0]
     return (
       <div className='container-fluid'>
         <div className='row'>
           <div className='col-md-6'>
-            <div className='searchbar'>
-              <input className='form-control' type="text" placeholder='Search'/>
-              <i className="input-right-icon fa fa-search" aria-hidden="true"></i>
+            <div className='search-block d-flex flex-column'>
+              <div className='searchbar mb-3 mt-3'>
+                <input className='form-control' type="text" placeholder='Search'/>
+                <i className="input-right-icon fa fa-search" aria-hidden="true"></i>
+              </div>
+              <div className='property-list row'>
+                
+                  <div className='col-md-6'>
+                    <div className='card mb-3'>
+                      <img className='property-card-img card-img-top' src={property.image_url}/>
+                      <div className='card-block'>
+                        Description
+                      </div>
+                    </div>
+                  </div>
+                  <div className='col-md-6'>
+                    <div className='card'>
+                      <img className='property-card-img card-img-top' src={property.image_url}/>
+                      <div className='card-block'>
+                        Description
+                      </div>
+                    </div>
+                  </div>
+                  <div className='col-md-6'>
+                    <div className='card'>
+                      <img className='property-card-img card-img-top' src={property.image_url}/>
+                      <div className='card-block'>
+                        Description
+                      </div>
+                    </div>
+                  </div>
+                  <div className='col-md-6'>
+                    <div className='card'>
+                      <img className='property-card-img card-img-top' src={property.image_url}/>
+                      <div className='card-block'>
+                        Description
+                      </div>
+                    </div>
+                  </div>
+                  <div className='col-md-6'>
+                    <div className='card'>
+                      <img className='property-card-img card-img-top' src={property.image_url}/>
+                      <div className='card-block'>
+                        Description
+                      </div>
+                    </div>
+                  </div>
+                  <div className='col-md-6'>
+                    <div className='card'>
+                      <img className='property-card-img card-img-top' src={property.image_url}/>
+                      <div className='card-block'>
+                        Description
+                      </div>
+                    </div>
+                  </div>
+                  <div className='col-md-6'>
+                    <div className='card'>
+                      <img className='property-card-img card-img-top' src={property.image_url}/>
+                      <div className='card-block'>
+                        Description
+                      </div>
+                    </div>
+                  </div>
+                  <div className='col-md-6'>
+                    <div className='card'>
+                      <img className='property-card-img card-img-top' src={property.image_url}/>
+                      <div className='card-block'>
+                        Description
+                      </div>
+                    </div>
+                  </div>
+                  <div className='col-md-6'>
+                    <div className='card'>
+                      <img className='property-card-img card-img-top' src={property.image_url}/>
+                      <div className='card-block'>
+                        Description
+                      </div>
+                    </div>
+                  </div>
+                
+              </div>
             </div>
           </div>
           <div className='no-padding col-md-6'>
