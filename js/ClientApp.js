@@ -3,6 +3,7 @@ import { render } from 'react-dom'
 import ReactMapboxGl from "react-mapbox-gl"
 import Features from './Features'
 import MapLabel from './MapLabel'
+import ResultCard from './ResultCard'
 
 const properties = [
   {
@@ -45,80 +46,13 @@ const App = React.createClass({
                 <i className="input-right-icon fa fa-search" aria-hidden="true"></i>
               </div>
               <div className='property-list row'>
-                
-                  <div className='col-md-6'>
-                    <div className='card mb-3'>
-                      <img className='property-card-img card-img-top' src={property.image_url}/>
-                      <div className='card-block'>
-                        Description
-                      </div>
-                    </div>
-                  </div>
-                  <div className='col-md-6'>
-                    <div className='card'>
-                      <img className='property-card-img card-img-top' src={property.image_url}/>
-                      <div className='card-block'>
-                        Description
-                      </div>
-                    </div>
-                  </div>
-                  <div className='col-md-6'>
-                    <div className='card'>
-                      <img className='property-card-img card-img-top' src={property.image_url}/>
-                      <div className='card-block'>
-                        Description
-                      </div>
-                    </div>
-                  </div>
-                  <div className='col-md-6'>
-                    <div className='card'>
-                      <img className='property-card-img card-img-top' src={property.image_url}/>
-                      <div className='card-block'>
-                        Description
-                      </div>
-                    </div>
-                  </div>
-                  <div className='col-md-6'>
-                    <div className='card'>
-                      <img className='property-card-img card-img-top' src={property.image_url}/>
-                      <div className='card-block'>
-                        Description
-                      </div>
-                    </div>
-                  </div>
-                  <div className='col-md-6'>
-                    <div className='card'>
-                      <img className='property-card-img card-img-top' src={property.image_url}/>
-                      <div className='card-block'>
-                        Description
-                      </div>
-                    </div>
-                  </div>
-                  <div className='col-md-6'>
-                    <div className='card'>
-                      <img className='property-card-img card-img-top' src={property.image_url}/>
-                      <div className='card-block'>
-                        Description
-                      </div>
-                    </div>
-                  </div>
-                  <div className='col-md-6'>
-                    <div className='card'>
-                      <img className='property-card-img card-img-top' src={property.image_url}/>
-                      <div className='card-block'>
-                        Description
-                      </div>
-                    </div>
-                  </div>
-                  <div className='col-md-6'>
-                    <div className='card'>
-                      <img className='property-card-img card-img-top' src={property.image_url}/>
-                      <div className='card-block'>
-                        Description
-                      </div>
-                    </div>
-                  </div>
-                
+                <ResultCard property={property}/>
+                <ResultCard property={property}/>
+                <ResultCard property={property}/>
+                <ResultCard property={property}/>
+                <ResultCard property={property}/>
+                <ResultCard property={property}/>
+                <ResultCard property={property}/>
               </div>
             </div>
           </div>
