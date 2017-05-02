@@ -4,38 +4,23 @@ import ReactMapboxGl from "react-mapbox-gl"
 import Features from './Features'
 import MapLabel from './MapLabel'
 import ResultCard from './ResultCard'
-
-const properties = [
-  {
-    id: 1,
-    number: "7555",
-    street: "20th Street", 
-    city: "Phoenix", 
-    postcode: "85020",
-    price: "$549,000",
-    lat: -0.481747846041145,
-    long: 51.3233379650232,
-    image_url: "https://commondatastorage.googleapis.com/psimple-listing-images/detail_6109ade6-f35e-48d6-8ccf-62e048ac9cfb.jpeg" 
-  }
-]
+import properties from '../public/data.json'
 
 const App = React.createClass({
   getInitialState () {
     return {
-      center: [-0.481747846041145, 51.3233379650232],
+      center: [-111.907047, 33.61525],
       zoom: [11],
-      selectedProperty: properties[0]
+      selectedProperty: null
     }
   },
   handleMarkerClick (property) {
     this.setState({
-      center: [property.lat, property.long],
-      zoom: [14],
+      center: [property.long, property.lat],
       selectedProperty: property 
     })
   },
   render () {
-    const property = properties[0]
     return (
       <div className='container-fluid'>
         <div className='row'>
@@ -46,13 +31,16 @@ const App = React.createClass({
                 <i className="input-right-icon fa fa-search" aria-hidden="true"></i>
               </div>
               <div className='property-list row'>
-                <ResultCard property={property}/>
-                <ResultCard property={property}/>
-                <ResultCard property={property}/>
-                <ResultCard property={property}/>
-                <ResultCard property={property}/>
-                <ResultCard property={property}/>
-                <ResultCard property={property}/>
+                {
+                  properties.map((property) => {
+                    return (
+                      <ResultCard 
+                        key={property.id}
+                        property={property}
+                      />
+                    )
+                  })
+                }
               </div>
             </div>
           </div>

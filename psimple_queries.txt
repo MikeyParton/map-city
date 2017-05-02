@@ -1,0 +1,28 @@
+// To get listings
+
+ids = ListingSearch.where({ address: "scottsdale" }, 20, 1).results.map {|l| l.listing_id }
+listings = Listing.where(id: ids)
+
+// To format listings
+
+formatted_listings = listings.map do |listing|
+  a_fields = listing.get_lead_address_attributes
+  {
+    id: listing.id,
+    number: a_fields[:listing_street_number],
+    street: a_fields[:listing_street_address],
+    postal_code: a_fields[:listing_postal_code],
+    city: a_fields[:listing_city],
+    state: a_fields[:listing_state],
+    lat: listing.lat.to_f,
+    long: listing.long.to_f,
+    title: listing.title,
+    rooms: listing.habitaciones,
+    bathrooms: listing.banios,
+    description: listing.descripcion,
+    price: listing.price.precio_subcentavos / 100,
+    image_url: listing.hero_image_url
+  }
+end
+
+pp formatted_listings.as_json

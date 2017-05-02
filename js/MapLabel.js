@@ -9,14 +9,14 @@ const MapLabel = React.createClass({
         {
           property && <Popup
             offset={[0, -100]}
-            coordinates={[property.lat, property.long]}>
+            coordinates={[property.long, property.lat]}>
             <div>
               <img className='map-thumbnail' src={property.image_url}/>
             </div>
             <div className='address'>
               <strong className='mr-2'>{formatAddress(property)}</strong>
               <div>
-                <span>{property.price}</span>
+                <span>{Price.format(property.price)}</span>
               </div>
             </div>
           </Popup>
@@ -25,6 +25,12 @@ const MapLabel = React.createClass({
     )
   }
 })
+
+const Price = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+  minimumFractionDigits: 0,
+});
 
 const formatAddress = (property) => {
   const { number, street, city, postcode } = property
