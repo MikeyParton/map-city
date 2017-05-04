@@ -1,5 +1,6 @@
 import React from 'react'
 import { Popup } from 'react-mapbox-gl'
+import { price_formatter } from './utils'
 
 const MapLabel = React.createClass({
   render () {
@@ -16,7 +17,7 @@ const MapLabel = React.createClass({
             <div className='address'>
               <strong className='mr-2'>{formatAddress(property)}</strong>
               <div>
-                <span>{Price.format(property.price)}</span>
+                <span>{price_formatter.format(property.price)}</span>
               </div>
             </div>
           </Popup>
@@ -25,12 +26,6 @@ const MapLabel = React.createClass({
     )
   }
 })
-
-const Price = new Intl.NumberFormat('en-US', {
-  style: 'currency',
-  currency: 'USD',
-  minimumFractionDigits: 0,
-});
 
 const formatAddress = (property) => {
   const { number, street, city, postcode } = property
