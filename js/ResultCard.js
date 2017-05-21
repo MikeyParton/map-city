@@ -6,7 +6,7 @@ const ResultCard = React.createClass({
     const { street, number, city, bathrooms, rooms, image_url, price } = this.props.property
     return (
       <div className='property-card child--flex--50'>
-        <div className='card mb-3'>
+        <div className='card'>
           <div className="property-card__fav">
             <i className="outline fa fa-heart-o fa-2x" aria-hidden="true"></i>
             <i className="fade-fill fa fa-heart fa-2x" aria-hidden="true"></i>
