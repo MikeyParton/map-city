@@ -30,9 +30,9 @@ const App = React.createClass({
   },
   render () {
     return (
-        <div className='wrapper'>
+        <div className='flex-container full-screen'>
           <Search propertySearch={this.propertySearch} properties={this.state.properties}/>
-          <div className='map'>
+          <div className='map child--flex--50'>
             <ReactMapboxGl
               style="mapbox://styles/mapbox/streets-v8"
               accessToken='pk.eyJ1IjoibWlrZS1wYXJ0b24iLCJhIjoiY2oxbDdldW5pMDAwajJ3bXRudmQyamZqbyJ9.0TtvXRYfJ7N9R8ehDes3bw'

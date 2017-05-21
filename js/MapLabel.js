@@ -12,9 +12,9 @@ const MapLabel = React.createClass({
             offset={[0, -100]}
             coordinates={[property.long, property.lat]}>
             <div>
-              <img className='map-thumbnail' src={property.image_url}/>
+              <img className='map__popup__thumb' src={property.image_url}/>
             </div>
-            <div className='address'>
+            <div className='map__popup__content'>
               <strong className='mr-2'>{formatAddress(property)}</strong>
               <div>
                 <span>{price_formatter.format(property.price)}</span>

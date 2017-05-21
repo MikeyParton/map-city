@@ -16,16 +16,17 @@ const Search = React.createClass({
   },
   render () {
     return (
-      <div className='search'>
-        <div className='searchbar'>
+      <div className='search child--flex--50'>
+        <div className='search__searchbar'>
           <input
+            className="text-field--icon-left"
             type="text"
             placeholder='Search'
             onKeyPress={this.handleKeyPress}
           />
-          <i className="search__icon--left fa fa-search" aria-hidden="true"></i>
+          <i className="text_field__icon--left fa fa-search" aria-hidden="true"></i>
         </div>
-        <div className='results-list'>
+        <div className='search__results flex-container--wrap'>
           {
             this.props.properties
               .map((property) => {
